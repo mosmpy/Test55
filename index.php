@@ -3,6 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ร้านก๋วยเตี๋ยวต้มยำ บ้านจุดข้างข้างวัง</title>
+<script src="SpryAssets/SpryValidationConfirm.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+<link href="SpryAssets/SpryValidationConfirm.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -53,16 +63,39 @@
   <p>
     <input type="radio" name="radio" id="a1" value="a1" />
     <label for="a1"></label>
-    กุ้งแม่น้ำ ตัวละ 55-.
-  </p>
+    กุ้งแม่น้ำ ตัวละ 55-. เลือกจำนวน 
+    <select name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  
   <p>
     <input type="radio" name="radio" id="a2" value="a2" />
     <label for="a2"></label>
-  ปลาหมึก  ตัวละ 55-.</p>
+  ปลาหมึก  ตัวละ 55-. เลือกจำนวน
+  <select name="jumpMenu2" id="jumpMenu2" onchange="MM_jumpMenu('parent',this,0)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  </p>
   <p>
     <input type="radio" name="radio" id="a3" value="a3" />
     <label for="a3"></label>
-  ใส่ไข่มะตูม ฟองละ 15-.</p>
+  ใส่ไข่มะตูม ฟองละ 15-. เลือกจำนวน
+  <select name="jumpMenu3" id="jumpMenu3" onchange="MM_jumpMenu('parent',this,0)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  </p>
   <p>
     <label for="a4"></label>
   </p>
@@ -81,12 +114,28 @@
   <label for="c3"></label>
   น้ำใส
 </form>
-  </p>  
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>
-    <label for="c3"></label>
-  </p>
+<form id="form5" name="form5" enctype="multipart/form-data" method="post" action="">
+  <label for="fileField"></label>
+  <label></label>
+  <p>*จำนวนที่สั่ง
+    <label for="ch1"></label>
+    <input type="text" name="ch1" id="ch1" />
+    <span id="spryconfirm1">
+    <label for="text1"></label>
+  <span class="confirmRequiredMsg">A value is required.</span><span class="confirmInvalidMsg">The values don't match.</span></span></p>
 </form>
+<form id="form6" name="form6" method="post" action="">
+  *ราคา  
+  <span id="sprypassword1"><span class="passwordRequiredMsg"> value is required.</span></span>
+  <span id="spryconfirm2">
+  <label for="pi1"></label>
+  <input type="text" name="pi1" id="pi1" />
+  <span class="confirmRequiredMsg">A value is required.</span><span class="confirmInvalidMsg">The values don't match.</span></span>
+</form>
+<script type="text/javascript">
+var spryconfirm1 = new Spry.Widget.ValidationConfirm("spryconfirm1", "ch1");
+var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
+var spryconfirm2 = new Spry.Widget.ValidationConfirm("spryconfirm2", "ch1");
+  </script>
 </body>
 </html>
