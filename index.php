@@ -74,7 +74,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <label for="a3"></label>
   ปลาหมึก ตัวละ 55-. เลือกจำนวน
   <select name="jumpMenu2" id="jumpMenu2" onchange="MM_jumpMenu('parent',this,0)">
-  <option>0</option>
+    <option>0</option>
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -87,7 +87,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <label for="a3"></label>
   ใส่ไข่มะตูม ฟองละ 15-. เลือกจำนวน
   <select name="jumpMenu3" id="jumpMenu3" onchange="MM_jumpMenu('parent',this,0)">
-  <option>0</option>
+    <option>0</option>
     <option>1</option>
     <option>2</option>
     <option>3</option>
